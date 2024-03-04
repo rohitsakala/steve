@@ -540,6 +540,7 @@ func (s *PodImpersonation) augmentPod(pod *v1.Pod, sa *v1.ServiceAccount, secret
 					LocalObjectReference: v1.LocalObjectReference{
 						Name: s.userConfigName(),
 					},
+					DefaultMode: 0600,
 				},
 			},
 		},
